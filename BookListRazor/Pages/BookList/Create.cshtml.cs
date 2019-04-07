@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BookListRazor.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace BookListRazor.Pages
+namespace BookListRazor.Pages.BookList
 {
-    public class IndexModel : PageModel
+    public class CreateModel : PageModel
     {
-        public IActionResult OnGet()
+        [BindProperty]
+        public Book Book { get; set; }
+
+        public void OnGet()
         {
-            return Page();
+
         }
     }
 }
