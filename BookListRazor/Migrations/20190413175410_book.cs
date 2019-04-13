@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BookListRazor.Migrations
 {
-    public partial class AddBookToDatabase : Migration
+    public partial class book : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
