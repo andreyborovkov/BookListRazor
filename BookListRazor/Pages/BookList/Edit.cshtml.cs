@@ -12,6 +12,9 @@ namespace BookListRazor.Pages.BookList
     {
         private ApplicationDbContext _db;
 
+        [TempData]
+        public string Message { get; set; }
+
         public EditModel(ApplicationDbContext db)
         {
             _db = db;
@@ -35,7 +38,7 @@ namespace BookListRazor.Pages.BookList
                 BookFromDb.ISBN = Book.ISBN;
 
                 await _db.SaveChangesAsync();
-
+                Message = "Book has been updated seccussfully";
                 return RedirectToPage("Index");
             }
 
